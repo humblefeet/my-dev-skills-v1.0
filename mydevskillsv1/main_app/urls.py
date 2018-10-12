@@ -8,5 +8,7 @@ urlpatterns=[
     path('welcome/', views.welcome, name='welcome'),
     path('skills/', views.skills_index, name='skills_index'),
     path('skills/create', views.SkillCreate.as_view(), name='skill_create'),
+    path('skills/<int:skill_id>', views.skill_detail, name='skill_detail'),
+
     
 ]

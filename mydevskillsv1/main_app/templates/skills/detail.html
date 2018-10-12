@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="/skills">My Skills</a>
+<div>
+    <h2>{{ skill.language }}</h2>
+    <p>Experience(years): {{skill.experience}}</p>
+    <p>Description: {{ skill.description }}</p>
+
+</div>
+
+{% endblock %}

@@ -6,7 +6,6 @@ class Skill(models.Model):
     language = models.CharField(max_length = 50)
     experience = models.IntegerField()
     description = models.TextField(max_length=250)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
     def __str__(self):

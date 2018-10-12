@@ -23,6 +23,11 @@ def skills_index(request):
 def skill_create(request):
     return render(request, 'skills/create.html')
 
+def skill_detail(request, skill_id):
+    skill = Skill.objects.get(id=skill_id)
+    return render(request, 'skills/detail.html', {
+    	'skill': skill,})
+
 def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)

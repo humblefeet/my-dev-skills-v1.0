@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<a href="/main_app/templates/skills/create.html">Add a Skill</a>
+<a href="/welcome">Home</a>
+<a href="/skills/create">Add a Skill</a>
     <h2>My Skills</h2>
+    {% for skill in skills %}
+    <div>
+        <a href="{% url 'skill_detail' skill.id %}">
+            <h4>Programming Language: {{skill.language}}</h4>
+        </a>
+            <hr>
 
-
+    </div>
+    {% endfor %}
 {% endblock %}
