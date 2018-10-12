@@ -63,11 +63,11 @@ def login_view(request):
 
 class SkillCreate(CreateView):
     model = Skill
-    fields = ['language', 'experience', 'description']
+    fields = '__all__'
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.user = self.request.user
         self.object.save()
-        return HttpResponseRedirect('/skills/index')
+        return HttpResponseRedirect('/skills')
 
